@@ -1,3 +1,341 @@
-.index-title {
-  font-size: 100px;
+.indexBanner {
+  height: 787px;
+  background-image: url(../images/home-header.png);
+  background-position: center;
+  background-size: cover;
+  @include pad {
+    background-image: url(../images/home-header-sm.png);
+  }
+  @include mobile {
+    height: 396px;
+  }
+  background-size: cover;
+  color: $textColor;
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+  }
+  p {
+    font-size: 36px;
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+  h1 {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    @include mobile {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+  }
+  .bannerBtn {
+    background-color: $primary;
+    color: white;
+    font-size: 20px;
+    padding: 6px 12px;
+    border: none;
+  }
+}
+
+.professional {
+  padding: 80px 0;
+  background-color: $secondary;
+  color: $textColor;
+  font-weight: bold;
+
+  h2 {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 32px;
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+  ul {
+    max-width: 100%;
+    display: flex;
+    gap: 24px;
+    @include pad {
+      flex-wrap: wrap;
+    }
+  }
+  li {
+    width: 25%;
+    @include pad {
+      width: calc(50% - 12px);
+    }
+    @include mobile {
+      width: 100%;
+    }
+    text-align: center;
+    span {
+      font-size: 100px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+    h3 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: normal;
+      color: #000;
+      text-align: left;
+    }
+  }
+}
+
+.classic {
+  padding: 80px 0;
+  @include pad {
+    padding: 40px 0;
+  }
+  font-size: 48px;
+  h2 {
+    color: $textColor;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 48px;
+    @include pad {
+      font-size: 24px;
+    }
+  }
+  ul {
+    display: flex;
+    gap: 24px;
+    @include pad {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  li {
+    max-width: calc(33.33% - 24px);
+    @include pad {
+      max-width: 43.75%;
+    }
+    @include mobile {
+      max-width: 100%;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 8px;
+    }
+    p {
+      font-style: italic;
+      text-align: center;
+      color: $primary;
+    }
+  }
+}
+
+.jointName {
+  padding: 80px 0;
+  @include pad {
+    padding: 40px 0;
+  }
+  background-image: url(../images/index-bg.png);
+  @include pad {
+    background-image: url(../images/index-bg-md.png);
+  }
+  @include mobile {
+    background-image: url(../images/index-bg-sm.png);
+  }
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 48px;
+  h2 {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 48px;
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+  ul {
+    display: flex;
+    @include pad {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+  li {
+    width: 50%;
+    @include pad {
+      width: 100%;
+    }
+    .img-double {
+      background-image: url(../images/home-section4-1.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 240px;
+      @include mobile {
+        background-image: url(../images/home-section4-1-sm.png);
+      }
+    }
+    .img-youth {
+      background-image: url(../images/home-section4-2.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 240px;
+      @include mobile {
+        background-image: url(../images/home-section4-2-sm.png);
+      }
+    }
+    p {
+      font-style: italic;
+      color: $primary;
+      text-align: center;
+      background-color: white;
+    }
+  }
+}
+
+.recommend {
+  padding: 80px 0;
+  @include pad {
+    padding: 40px 0;
+  }
+  font-size: 48px;
+  h2 {
+    text-align: center;
+    color: $textColor;
+    font-weight: bold;
+    margin-bottom: 48px;
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+  ul {
+    width: 100%;
+    display: flex;
+    gap: 24px;
+    @include pad {
+      flex-wrap: wrap;
+    }
+    @include mobile{
+      gap: 16pxx;
+    }
+  }
+  li {
+    max-width: 25%;
+    @include pad {
+      max-width: calc(50% - 12px);
+    }
+    @include mobile {
+      margin: 0 auto;
+      max-width: 100%;
+    }
+    box-shadow: 0px 2px 6px #00000029;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .recommendContent {
+      display: flex;
+      flex-direction: column;
+      height: 205px;
+      padding: 16px;
+    }
+    .name {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .illustrate {
+      font-size: 16px;
+      margin-bottom: auto;
+    }
+    .date {
+      font-size: 14px;
+      color: #707070;
+    }
+  }
+}
+
+.connectionWrap {
+  padding: 80px 0;
+  background-color: $secondary;
+  .connection {
+    width:636px;
+    @include pad{
+      width: 576px;
+    }
+    @include mobile{
+      max-width: 100%;
+    }
+    margin: 0 auto;
+    h2 {
+      text-align: center;
+      color: $textColor;
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 48px;
+      @include mobile {
+        font-size: 24px;
+      }
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
+    .userData {
+      display: flex;
+      flex-direction: column;
+    }
+    .dataLabel {
+      margin-bottom: 8px;
+    }
+    .dataInput {
+      padding: 6px 12px;
+      height: 36px;
+      border: 1px solid #000000;
+      margin-bottom: 16px;
+    }
+    .opinion{
+      padding: 6px 12px;
+      height: 136px;
+      border: 1px solid #000000;
+      margin-bottom: 16px;
+    }
+    .agree{
+      display: flex;
+      align-items: center;
+      @include mobile{
+        align-items: start;
+      }
+      margin-bottom: 48px;
+    }
+    .submitBtn{
+      padding: 16px 176px;
+      @include pad{
+        padding: 16px 136px;
+      }
+      @include mobile{
+        padding: 16px 142px;
+      }
+      background: $primary;
+      color: white;
+      border: none;
+      align-self: center;
+      transition: all 0.3s ease;
+      &:hover{
+        background-color: #650300;
+      }
+    }
+  }
 }

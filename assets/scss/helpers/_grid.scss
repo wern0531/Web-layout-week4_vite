@@ -1,0 +1,47 @@
+$gutter-width: 24px; // 定義gutter的寬度
+$grid-num: 12; // 定義格線系統的格線數量
+
+@mixin pad {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
+@mixin mobile {
+    @media (max-width: 767.5px) {
+      @content;
+    }
+  }
+@mixin container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+  //992
+@mixin container-md {
+    max-width: 968px;
+    padding: 0 36px;
+  }
+  //768
+@mixin container-sm {
+    max-width: 720px;
+    padding: 0 12px;
+  } 
+
+.container {
+    @include container;
+    @include pad {
+      @include container-md;
+    }
+    @include mobile {
+      @include container-sm;
+    }
+  }
+
+@for $i from 1 through $grid-num {
+  // 生成對應的class
+  .col-#{$i} {
+    width: calc(100% * ($i / $grid-num));
+    padding-left: calc($gutter-width / 2);
+    padding-right: calc($gutter-width / 2);
+  }
+}
